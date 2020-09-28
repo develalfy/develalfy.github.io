@@ -43,8 +43,9 @@ career-profile:
   title: Career Profile
   summary: |
     I am a highly motivated Software Engineer with several years experienceand a good Computer Science background.
-    I enjoy delivering effectiveand robust solutions.
-    I specialize in API Development with MVCframeworks, such as Laravel and Lumen.
+    I enjoy delivering effective and robust solutions.
+    I specialize in API Development with MVC frameworks, such as Laravel and Lumen.
+    I play with DevOps tools and AWS and I feel comfortable with CI/CD pipelines :-D
     You can [download my CV](https://drive.google.com/file/d/1-hc0DoylocmyB_rPmSIfpRtbu2FzqXCL/view?usp=sharing).
 education:
   - degree: MSc in Computer Science
@@ -111,19 +112,19 @@ experiences:
     company: Ieasoft.com, Mansoura, Egypt
     details: |
       Co-founder and a PHP Developer, producing websites and web applications using PHP and frameworks like Laravel and CodeIgniter.
-projects:
-  title: Projects
-  intro: >
-    You can list your side projects or open source libraries in this
-    section.
-  assignments:
-    - title: Velocity
-      link: "#hook"
-      tagline: "A responsive website template designed to help startups promote, market and sell their products."
-
-    - title: DevStudio
-      link: "#"
-      tagline: "A responsive website template designed to help web developers/designers market their services."
+#projects:
+#  title: Projects
+#  intro: >
+#    You can list your side projects or open source libraries in this
+#    section.
+#  assignments:
+#    - title: Velocity
+#      link: "#hook"
+#      tagline: "A responsive website template designed to help startups promote, market and sell their products."
+#
+#    - title: DevStudio
+#      link: "#"
+#      tagline: "A responsive website template designed to help web developers/designers market their services."
 
 skills:
   title: Skills &amp; Proficiency
