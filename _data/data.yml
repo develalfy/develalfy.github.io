@@ -3,189 +3,176 @@
 #
 
 sidebar:
-    about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
-    education: False # set to False if you want education in main section instead of in sidebar
+  about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
+  education: False # set to False if you want education in main section instead of in sidebar
 
-    # Profile information
-    name: Ashraf Elalfy
-    tagline: Full Stack Developer
-    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+  # Profile information
+  name: Ashraf Elalfy
+  tagline: Full Stack Developer
+  avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
-    # Sidebar links
-    email: elalfi.ashraf@gmail.com
-    phone: +20 106 615 5007
-    website: develalfy.me #do not add http://
-    linkedin: develalfy
-    github: develalfy
-    telegram: # add your nickname without '@' sign
-    gitlab:
-    bitbucket:
-    twitter: '@develalfy'
-    stack-overflow: # Number/Username, e.g. 123456/develalfy
-    codewars:
-    goodreads: # Number-Username, e.g. 123456-develalfy
+  # Sidebar links
+  email: elalfi.ashraf@gmail.com
+  phone: +20 106 615 5007
+  website: develalfy.me #do not add http://
+  linkedin: develalfy
+  github: develalfy
+  telegram: # add your nickname without '@' sign
+  gitlab:
+  bitbucket:
+  twitter: '@develalfy'
+  stack-overflow: # Number/Username, e.g. 123456/develalfy
+  codewars:
+  goodreads: # Number-Username, e.g. 123456-develalfy
 
-    languages:
-      - idiom: Arabic
-        level: Native
+  languages:
+    - idiom: Arabic
+      level: Native
 
-      - idiom: English
-        level: Professional
+    - idiom: English
+      level: Professional
 
-    interests:
-      - item: Video games
-        link:
+  interests:
+    - item: Video games
+      link:
 
-      - item: DevOps
-        link:
+    - item: DevOps
+      link:
 
 career-profile:
-    title: Career Profile
-    summary: |
-      I am a highly motivated Software Engineer with several years experienceand a good Computer Science background.
-      I enjoy delivering effectiveand robust solutions.
-      I specialize in API Development with MVCframeworks, such as Laravel and Lumen.
-      You can [download my CV](https://drive.google.com/file/d/1-hc0DoylocmyB_rPmSIfpRtbu2FzqXCL/view?usp=sharing).
+  title: Career Profile
+  summary: |
+    I am a highly motivated Software Engineer with several years experienceand a good Computer Science background.
+    I enjoy delivering effectiveand robust solutions.
+    I specialize in API Development with MVCframeworks, such as Laravel and Lumen.
+    You can [download my CV](https://drive.google.com/file/d/1-hc0DoylocmyB_rPmSIfpRtbu2FzqXCL/view?usp=sharing).
 education:
-    - degree: MSc in Computer Science
-      university: University of London
-      time: 2011 - 2012
-      details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
-    - degree: BSc in Computer science
-      university: Misr higher institute forengineering and technology in Mansoura
-      time: 2012 - 2015
-      details: |
-        BSc Computer Science and Communications
+  - degree: MSc in Computer Science
+    university: University of London
+    time: 2011 - 2012
+    details: |
+      Describe your study here lorem ipsum dolor sit amet, consectetuer
+      adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+      sociis natoque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+      pretium quis, sem.
+        - Bullet point
+        - Bullet point
+  - degree: BSc in Computer science
+    university: Misr higher institute forengineering and technology in Mansoura
+    time: 2012 - 2015
+    details: |
+      BSc Computer Science and Communications
 experiences:
-    - role: Backend Software Engineer
-      time: 2018 - Present
-      company: Areeb Group, Cairo, Egypt
-      details: |
-        Member of the backend team, producing Products mainly for UK.
-        I've played a main role in the process of initializing and maintaining the workflow using soem technologies like:-
-          - AWS [ Beanstalk, ec2, RDS, S3, Route53, CloudFront ].-
-          - CI/CD using [ Gitlab, Azure DevOps ].
-          - Laravel
-    - role: Backend Software Engineer
-      time: 2017 - 2018
-      company: Robustastudio.com, Cairo, Egypt
-      details: |
-        Member of the backend team, producing multiple websites and mobile apps.
-    - role: Backend Software Engineer
-      time: 2017
-      company: Botler.io, Remote
-      details: |
-        Member of the backend team, producing chatbots and web applications related to AI & Machine learning.
-    - role: Backend Software Engineer
-      time: 2015 - 2017
-      company: Ousta Technologies, Cairo, Egypt
-      details: |
-        Member of the backend team, producing a platform with SaaSarchitectures and DevOps,
-        resulting in a successful product and Agile culture using cutting-edge technologies such as:-
-          - AmazonWeb Services (AWS)
-          - ElasticSearch
-          - Logstash
-          - Kibana
-          - Jenkins,Cassandra
-          - API Gateway
-          - NGINX
-          - AngularJS
-          - JavaScript/Typescript
-          - Docker
-          - PHP
-          - JIRA.
-    - role: PHP Developer
-      time: 2017 - 2018
-      company: E-motion digital creative solutions agency, Cairo, Egypt
-      details: |
-        Member of the technology team, producing websites and web applications with PHP and a CMS based on Zend 2 Frame work.
-    - role: Backend Software Engineer
-      time: 2014 - 2015
-      company: Ieasoft.com, Mansoura, Egypt
-      details: |
-        Co-founder and a PHP Developer, producing websites and web applications using PHP and frameworks like Laravel and CodeIgniter.
+  - role: Backend Software Engineer
+    time: 2018 - Present
+    company: Areeb Group, Cairo, Egypt
+    details: |
+      Member of the backend team, producing Products mainly for UK.
+      I've played a main role in the process of initializing and maintaining the workflow using soem technologies like:-
+        - AWS [ Beanstalk, ec2, RDS, S3, Route53, CloudFront ].-
+        - CI/CD using [ Gitlab, Azure DevOps ].
+        - Laravel
+  - role: Backend Software Engineer
+    time: 2017 - 2018
+    company: Robustastudio.com, Cairo, Egypt
+    details: |
+      Member of the backend team, producing multiple websites and mobile apps.
+  - role: Backend Software Engineer
+    time: 2017
+    company: Botler.io, Remote
+    details: |
+      Member of the backend team, producing chatbots and web applications related to AI & Machine learning.
+  - role: Backend Software Engineer
+    time: 2015 - 2017
+    company: Ousta Technologies, Cairo, Egypt
+    details: |
+      Member of the backend team, producing a platform with SaaSarchitectures and DevOps,
+      resulting in a successful product and Agile culture using cutting-edge technologies such as:-
+        - AmazonWeb Services (AWS)
+        - ElasticSearch
+        - Logstash
+        - Kibana
+        - Jenkins,Cassandra
+        - API Gateway
+        - NGINX
+        - AngularJS
+        - JavaScript/Typescript
+        - Docker
+        - PHP
+        - JIRA.
+  - role: PHP Developer
+    time: 2017 - 2018
+    company: E-motion digital creative solutions agency, Cairo, Egypt
+    details: |
+      Member of the technology team, producing websites and web applications with PHP and a CMS based on Zend 2 Frame work.
+  - role: Backend Software Engineer
+    time: 2014 - 2015
+    company: Ieasoft.com, Mansoura, Egypt
+    details: |
+      Co-founder and a PHP Developer, producing websites and web applications using PHP and frameworks like Laravel and CodeIgniter.
 projects:
-    title: Projects
-    intro: >
-      You can list your side projects or open source libraries in this
-      section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-    assignments:
-      - title: Velocity
-        link: "#hook"
-        tagline: "A responsive website template designed to help startups promote, market and sell their products."
+  title: Projects
+  intro: >
+    You can list your side projects or open source libraries in this
+    section.
+  assignments:
+    - title: Velocity
+      link: "#hook"
+      tagline: "A responsive website template designed to help startups promote, market and sell their products."
 
-      - title: DevStudio
-        link: "#"
-        tagline: "A responsive website template designed to help web developers/designers market their services."
-
-      - title: Tempo
-        link: "#"
-        tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
-
-      - title: Atom
-        link: "#"
-        tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
-
-      - title: Delta
-        link: "#"
-        tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+    - title: DevStudio
+      link: "#"
+      tagline: "A responsive website template designed to help web developers/designers market their services."
 
 skills:
-    title: Skills &amp; Proficiency
+  title: Skills &amp; Proficiency
 
-    toolset:
-      - name: PHP
-        level: 95%
-      - name: MySQL
-        level: 90%
-      - name: PostgreSQL
-        level: 80%
-      - name: Javascript
-        level: 40%
-      - name: Python
-        level: 40%
-      - name: Bash
-        level: 50%
-      - name: Laravel
-        level: 90%
-      - name: Lumen
-        level: 85%
-      - name: CodeIgniter
-        level: 60%
-      - name: jQuery
-        level: 30%
-      - name: MVC
-        level: 90%
-      - name: SOLID
-        level: 85%
-      - name: REST API
-        level: 90%
-      - name: Git
-        level: 95%
-      - name: Eloquent
-        level: 90%
-     - name: Linux (Shell/Debian based/Arch Based),Microsoft Windows
-       level: 90%
-      - name: Composer
-        level: 80%
-      - name: Docker
-        level: 85%
-      - name: Gitlab CI/CD
-        level: 80%
-      - name: Azure DevOps CI/CD
-        level: 80%
-      - name: AWS [ Bean stalk - ec2 - RDS - S3 - Route53 - CloudFront ]
-        level: 80%
-      - name: Agile
-        level: 85%
+  toolset:
+    - name: PHP
+      level: 95%
+    - name: MySQL
+      level: 90%
+    - name: PostgreSQL
+      level: 80%
+    - name: Javascript
+      level: 40%
+    - name: Python
+      level: 40%
+    - name: Bash
+      level: 50%
+    - name: Laravel
+      level: 90%
+    - name: Lumen
+      level: 85%
+    - name: CodeIgniter
+      level: 60%
+    - name: jQuery
+      level: 30%
+    - name: MVC
+      level: 90%
+    - name: SOLID
+      level: 85%
+    - name: REST API
+      level: 90%
+    - name: Git
+      level: 95%
+    - name: Eloquent
+      level: 90%
+    - name: Linux (Shell/Debian based/Arch Based),Microsoft Windows
+      level: 90%
+    - name: Composer
+      level: 80%
+    - name: Docker
+      level: 85%
+    - name: Gitlab CI/CD
+      level: 80%
+    - name: Azure DevOps CI/CD
+      level: 80%
+    - name: AWS [ Bean stalk - ec2 - RDS - S3 - Route53 - CloudFront ]
+      level: 80%
+    - name: Agile
+      level: 85%
 
 footer: >
-    Hosted with <i class="fas fa-heart"></i> by <a href="http://pages.github.com" target="_blank" rel="nofollow">GitHub</a>
+  Hosted with <i class="fas fa-heart"></i> by <a href="http://pages.github.com" target="_blank" rel="nofollow">GitHub</a>
