@@ -12,15 +12,15 @@ sidebar:
     avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: hello@webjeda.com
-    phone: 012 345 6789
-    website: blog.webjeda.com #do not add http://
+    email: elalfi.ashraf@gmail.com
+    phone: +20 106 615 5007
+    website: develalfy.me #do not add http://
     linkedin: alandoe
-    github: sharu725
+    github: develalfy
     telegram: # add your nickname without '@' sign
     gitlab:
     bitbucket:
-    twitter: '@webjeda'
+    twitter: '@develalfy'
     stack-overflow: # Number/Username, e.g. 123456/alandoe
     codewars:
     goodreads: # Number-Username, e.g. 123456-alandoe
@@ -42,12 +42,10 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Summarise your career here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. You can [download this free resume/CV template here]().
-      Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu.
-      Second paragraph if required.
+      I am a highly motivated Software Engineer with several years experienceand a good Computer Science background.
+      I enjoy delivering effectiveand robust solutions.
+      I specialize in API Development with MVCframeworks, such as Laravel and Lumen.
+      You can [download my CV](https://drive.google.com/file/d/1-hc0DoylocmyB_rPmSIfpRtbu2FzqXCL/view?usp=sharing).
 education:
     - degree: MSc in Computer Science
       university: University of London
@@ -60,55 +58,59 @@ education:
         pretium quis, sem.
           - Bullet point
           - Bullet point
-    - degree: BSc in Applied Mathematics
-      university: Bristol University
-      time: 2007 - 2011
+    - degree: BSc in Computer science
+      university: Misr higher institute forengineering and technology in Mansoura
+      time: 2012 - 2015
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        BSc Computer Science and Communications
 experiences:
-    - role: Lead Developer
-      time: 2015 - Present
-      company: Startup Hubs, San Francisco
+    - role: Backend Software Engineer
+      time: 2018 - Present
+      company: Areeb Group, Cairo, Egypt
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-        enim. Donec pede justo. Sed ut perspiciatis unde omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt explicabo.
-          - Bullet point
-          - Bullet point
-    - role: Senior Software Engineer
+        Member of the backend team, producing Products mainly for UK.
+        I've played a main role in the process of initializing and maintaining the workflow using soem technologies like:-
+          - AWS [ Beanstalk, ec2, RDS, S3, Route53, CloudFront ].-
+          - CI/CD using [ Gitlab, Azure DevOps ].
+          - Laravel
+    - role: Backend Software Engineer
+      time: 2017 - 2018
+      company: Robustastudio.com, Cairo, Egypt
+      details: |
+        Member of the backend team, producing multiple websites and mobile apps.
+    - role: Backend Software Engineer
+      time: 2017
+      company: Botler.io, Remote
+      details: |
+        Member of the backend team, producing chatbots and web applications related to AI & Machine learning.
+    - role: Backend Software Engineer
+      time: 2015 - 2017
+      company: Ousta Technologies, Cairo, Egypt
+      details: |
+        Member of the backend team, producing a platform with SaaSarchitectures and DevOps,
+        resulting in a successful product and Agile culture using cutting-edge technologies such as:-
+          - AmazonWeb Services (AWS)
+          - ElasticSearch
+          - Logstash
+          - Kibana
+          - Jenkins,Cassandra
+          - API Gateway
+          - NGINX
+          - AngularJS
+          - JavaScript/Typescript
+          - Docker
+          - PHP
+          - JIRA.
+    - role: PHP Developer
+      time: 2017 - 2018
+      company: E-motion digital creative solutions agency, Cairo, Egypt
+      details: |
+        Member of the technology team, producing websites and web applications with PHP and a CMS based on Zend 2 Frame work.
+    - role: Backend Software Engineer
       time: 2014 - 2015
-      company: Google, London
+      company: Ieasoft.com, Mansoura, Egypt
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
-    - role: UI Developer
-      time: 2012 - 2014
-      company: Amazon, London
-      details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        Co-founder and a PHP Developer, producing websites and web applications using PHP and frameworks like Laravel and CodeIgniter.
 projects:
     title: Projects
     intro: >
@@ -136,37 +138,15 @@ projects:
         link: "#"
         tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
 
-publications:
-    title: Publications
-    intro: |
-      You can list your publications in this section. Lorem ipsum dolor sit
-      amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-      bibendum fringilla a eu lectus.
-    papers:
-      - title: The Art of Computer Programming
-        link: "#"
-        authors: Donald E. Knuth
-        conference: Addison-Wesley, 1968
-
-      - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-        link: "#"
-        authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-        conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
-
-      - title: A syntax directed compiler for Algol 60
-        link: "#"
-        authors: Edgar T. Irons
-        conference: "Comm. ACM 4 (1961), 51–55"
-
 skills:
     title: Skills &amp; Proficiency
 
     toolset:
-      - name: Python & Django
+      - name: PHP
         level: 98%
 
-      - name: Javascript & jQuery
-        level: 98%
+      - name: MySql
+        level: 90%
 
       - name: Angular
         level: 98%
@@ -174,11 +154,11 @@ skills:
       - name: HTML5 & CSS
         level: 95%
 
-      - name: Ruby on Rails
-        level: 85%
+      - name: Python
+        level: 40%
 
-      - name: Sketch & Photoshop
-        level: 60%
+      - name: Go
+        level: 40%
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
