@@ -7,7 +7,7 @@ sidebar:
   education: False # set to False if you want education in main section instead of in sidebar
 
   # Profile information
-  name: Ashraf Elalfy
+  name: Ashraf Elalfi
   tagline: Backend engineer, Leader at Slack platform community Cairo chapter.
 
   avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
