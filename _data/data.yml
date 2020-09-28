@@ -53,6 +53,13 @@ education:
     time: 2012 - 2015
     details: |
       BSc Computer Science and Communications
+volunteers:
+  - role: Cairo Chapter Leader
+    time: 2020 - Present
+    company: Slack platform community, Cairo, Egypt
+    details: |
+      Know more about Cairo's chapter from [Here](https://slackcommunity.com/cairo/)
+
 experiences:
   - role: Backend Software Engineer
     time: 2018 - Present
@@ -114,9 +121,6 @@ experiences:
 #    - title: DevStudio
 #      link: "#"
 #      tagline: "A responsive website template designed to help web developers/designers market their services."
-
-
-volunteers:
 
 
 skills:
