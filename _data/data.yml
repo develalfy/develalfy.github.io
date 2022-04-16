@@ -43,11 +43,9 @@ sidebar:
 career-profile:
   title: Career Profile
   summary: |
-    I am a highly motivated Software Engineer with several years experience and a good Computer Science background.
-    I enjoy delivering effective and robust solutions.
-    I specialize in API Development with MVC frameworks, such as Laravel and Lumen.
-    I play with DevOps tools and AWS and I feel comfortable with CI/CD pipelines :-D
-    You can [download my CV](https://drive.google.com/file/d/1-hc0DoylocmyB_rPmSIfpRtbu2FzqXCL/view?usp=sharing).
+    Backend software engineer and CSD® experienced in building web applications following agile serving lots of users with a passion for automation.
+    I'm working with multicultural and international teams.
+    You can [download my CV](https://drive.google.com/file/d/1ow_LnnP8TIvXMmUJX3b1z-VrKfN-Ey0N/view?usp=sharing).
 education:
   - degree: BSc in Computer science
     university: Misr higher institute for engineering and technology in Mansoura
@@ -61,12 +59,23 @@ volunteers:
     details: |
       Know more about Cairo's chapter from [Here](https://slackcommunity.com/cairo/)
 experiences:
-  - role: Backend Software Engineer
+  - role: Backend Developer & Squad leadBackend
     time: 2018 - Present
     company: Areeb Group, Cairo, Egypt
     details: |
-      Member of the backend team, producing Products mainly for UK.
-      I've played a main role in the process of initializing and maintaining the workflow using soem technologies like:-
+      - Invesna. 
+        - Lead the squad to achieve every sprint goal for about a year. CSD, Scrum, Azure boards.
+        - Developed generic components and refactored core features in this large investment project. Laravel, MySql, Postman
+        - Increased Unit testing code coverage to be 40% from scratch. PHPUnit, Mockery, Pair-Mob programming.
+        - Automated the process of Integration and Deployment. Azure DevOps, CI, CD, Git-Flow.
+        - Introduced Changelog to keep tracking the progress.
+        - Built multiple environments. AWS
+        - Upgraded environments from Amazon Linux to Amazon Linux 2.
+      - Boxooo. Designed system structure to have Repository-Service pattern.
+        - Developed core features following TDD, Laravel, MySql, PHPUnit.
+        - Built multiple environments. AWS, Azure DevOps
+      - Doobo. Helped the team to deploy to production for the first time, AWS, Azure DevOps.
+      - Built a bash script to backup the database daily for non-production environments.
         - AWS [ Beanstalk, ec2, RDS, S3, Route53, CloudFront ].-
         - CI/CD using [ Gitlab, Azure DevOps ].
         - Laravel
@@ -74,12 +83,13 @@ experiences:
     time: 2017 - 2018
     company: Robustastudio.com, Cairo, Egypt
     details: |
-      Member of the backend team, producing multiple websites and mobile apps.
+      Developed several web applications like Mountain view, Faragalla, DAN, Gazef, Trackmena, Couponat, Supermama, Coach to win, Go bus, Coast82 and AXA.
+      Laravel, PHP, MySql, PostgreSql, AWS, Docker, Javascript, WordPressDeveloped.
   - role: Backend Software Engineer
     time: 2017
     company: Botler.io, Remote
     details: |
-      Member of the backend team, producing chatbots and web applications related to AI & Machine learning.
+      Worked on a chatbot service for companies. Laravel, Docker.
   - role: Backend Software Engineer
     time: 2015 - 2017
     company: Ousta Technologies, Cairo, Egypt
