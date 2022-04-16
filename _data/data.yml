@@ -94,30 +94,25 @@ experiences:
     time: 2015 - 2017
     company: Ousta Technologies, Cairo, Egypt
     details: |
-      Member of the backend team, producing a platform with SaaS architectures and DevOps,
-      resulting in a successful product and Agile culture using cutting-edge technologies such as:-
-        - AmazonWeb Services (AWS)
-        - ElasticSearch
-        - Logstash
-        - Kibana
-        - Jenkins,Cassandra
-        - API Gateway
-        - NGINX
-        - AngularJS
-        - JavaScript/Typescript
-        - Docker
-        - PHP
-        - JIRA.
-  - role: PHP Developer
+      Member of the backend team, producing a platform with SaaS architectures and DevOps, 
+      resulting in a successful product and Agile culture using cutting-edge technologies such as 
+      Amazon Web Services (AWS), Jenkins, API Gateway, NGINX, JavaScript/Typescript, Docker, PHP, JIRA
+  - role: Backend Software Engineer
     time: 2017 - 2018
     company: E-motion digital creative solutions agency, Cairo, Egypt
     details: |
-      Member of the technology team, producing websites and web applications with PHP and a CMS based on Zend 2 Frame work.
+      Developed several web applications like Ceramica Innova, MediGroup, Egec, Universal, Suprimo. PHP, MySql, Zendframework2.
   - role: Backend Software Engineer
     time: 2014 - 2015
     company: Ieasoft.com, Mansoura, Egypt
     details: |
-      Co-founder and a PHP Developer, producing websites and web applications using PHP and frameworks like Laravel and CodeIgniter.
+      Developed several web applications using HTML, CSS, JavaScript, PHP, Laravel, MySql.
+  - role: Backend Software Engineer
+    time: 2014 - 2015
+    company: Emagile, Mansoura, Egypt
+    details: |
+      Developed several web applications using HTML, CSS, JavaScript, PHP, MySql.
+
 #projects:
 #  title: Projects
 #  intro: >
