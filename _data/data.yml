@@ -14,13 +14,13 @@ sidebar:
   website: develalfy.me # do not add http://
   linkedin: develalfy
   github: develalfy
-  telegram: # add your nickname without '@' sign
+  telegram: 
   gitlab:
   bitbucket:
   twitter: '@develalfy'
-  stack-overflow: # Number/Username, e.g. 123456/develalfy
+  stack-overflow: 
   codewars:
-  goodreads: # Number-Username, e.g. 123456-develalfy
+  goodreads: 
 
   languages:
     - idiom: Arabic
@@ -29,12 +29,13 @@ sidebar:
     - idiom: English
       level: Very Good
 
+    - idiom: German
+      level: Beginner
+
   interests:
     - item: Video games
-      link:
-
-    - item: DevOps
-      link:
+    - item: GYM
+    - item: Football
 
 career-profile:
   title: Career Profile
@@ -56,106 +57,98 @@ volunteers:
     details: |
       Managing and leading the Cairo chapter of the Slack platform community.
 
+  - role: Core Member
+    time: 
+    company: DevMix
+
+  - role: Founder
+    time: 
+    company: IT-Geeks
+
 experiences:
   - role: Backend Software Engineer | PHP
     time: August 2022 - Present
-    company: Sam Media, Kuala Lumpur, Malaysia
+    company: SamMedia, Kuala Lumpur, Malaysia
     details: |
-      Developing, refactoring, and enhancing connections between our platform and 90 different mobile network operators with about more than 1.5 million subscribers. 
-      Technologies used include PHP, MySql, CI/CD, Gitlab, Jenkins, Sentry, Kibana, Docker.
+      - Developing, refactoring, and enhancing connections between our platform and 90 different mobile network operators with about more than 1.5 million subscribers.
+      - Technologies used include: PHP, MySql, CI/CD, Gitlab, Jenkins, Sentry, Kibana, Docker.
 
   - role: Backend Software Engineer & Squad Lead
     time: November 2018 - August 2022
     company: Areeb Technology, Cairo, Egypt
     details: |
-      Led the squad to achieve every sprint goal for about a year. Developed generic components and refactored core features in this large investment project. Increased Unit testing code coverage to 40% from scratch. Automated the process of Integration and Deployment.
-      Technologies used include Laravel, MySql, Postman, PHPUnit, Mockery, Pair-Mob programming, Azure DevOps, CI, CD, Git-Flow.
+      - Led the squad to achieve every sprint goal for about a year.
+      - Developed generic components and refactored core features in a large investment project.
+      - Increased Unit testing code coverage to 40% from scratch.
+      - Automated the process of Integration and Deployment.
+      - Technologies used include: Laravel, MySql, Postman, PHPUnit, Mockery, Pair-Mob programming, Azure DevOps, CI, CD, Git-Flow.
 
   - role: Backend Software Engineer
     time: November 2017 - November 2018
     company: Robusta Studio, Cairo, Egypt
     details: |
-      Developed several web applications like Mountain view, Faragalla, DAN, Gazef, Trackmena, Couponat, Supermama, Coach to win, Go bus, Coast82, and AXA.
-      Technologies used include Laravel, PHP, MySql, PostgreSql, AWS, Docker, Javascript, WordPress.
+      - Developed web applications like Mountain view, Faragalla, DAN, Gazef, Trackmena, Couponat, Supermama, Coach to win, Go bus, Coast82, and AXA.
+      - Technologies used include: Laravel, PHP, MySql, PostgreSQL, AWS, Docker, Javascript, WordPress.
 
   - role: Backend Software Engineer
     time: May 2017 - October 2017
     company: Botler.io, Remote, Dubai
     details: |
-      Worked on a chatbot service for companies. Technologies used include Laravel, Docker.
+      - Worked on a chatbot service for companies.
+      - Technologies used include: Laravel, Docker.
 
   - role: Backend Software Engineer
     time: October 2015 - March 2017
     company: Ousta Technologies, Cairo, Egypt
     details: |
-      Part of the backend team, produced a platform with SaaS architectures and DevOps, resulting in a successful product and Agile culture using cutting-edge technologies such as Amazon Web Services (AWS), Jenkins, API Gateway, NGINX, JavaScript/Typescript, Docker, PHP, JIRA.
+      - Part of the backend team, produced a platform with SaaS architectures and DevOps.
+      - Resulted in a successful product and Agile culture using technologies such as AWS, Jenkins, API Gateway, NGINX, JavaScript/Typescript, Docker, PHP, JIRA.
 
   - role: Backend Software Engineer
     time: July 2014 - September 2015
     company: E-motion digital agency, Cairo, Egypt
     details: |
-      Developed several web applications like Ceramica Innova, MediGroup, Egec, Universal, Suprimo. Technologies used include PHP, MySql, Zendframework2.
+      - Developed web applications like Ceramica Innova, MediGroup, Egec, Universal, Suprimo.
+      - Technologies used include: PHP, MySql, Zendframework2.
 
   - role: Co-Founder & Backend Software Engineer
     time: September 2013 - July 2014
     company: Ieasoft, Mansoura, Egypt
     details: |
-      Co-Founded and developed several web applications using HTML, CSS, JavaScript, PHP, Laravel, MySql.
+      - Co-Founded and developed several web applications using HTML, CSS, JavaScript, PHP, Laravel, MySql.
 
   - role: Backend Software Engineer
     time: April 2013 - September 2013
     company: Emagile, Mansoura, Egypt
     details: |
-      Developed several web applications using HTML, CSS, JavaScript, PHP, MySql.
+      - Developed several web applications using HTML, CSS, JavaScript, PHP, MySql.
 
 skills:
   title: Skills & Proficiency
 
   toolset:
     - name: PHP
-      level: 95%
-    - name: MySQL
-      level: 90%
-    - name: PostgreSQL
-      level: 80%
-    - name: JavaScript
-      level: 40%
-    - name: Python
-      level: 40%
-    - name: Bash
-      level: 50%
+      level: Expert
     - name: Laravel
-      level: 90%
-    - name: Lumen
-      level: 85%
-    - name: CodeIgniter
-      level: 60%
-    - name: jQuery
-      level: 30%
-    - name: MVC
-      level: 90%
-    - name: SOLID
-      level: 85%
-    - name: REST API
-      level: 90%
+      level: Expert
+    - name: MySQL
+      level: Expert
     - name: Git
-      level: 95%
-    - name: Eloquent
-      level: 90%
-    - name: Linux (Shell/Debian based/Arch Based), Microsoft Windows
-      level: 90%
-    - name: Composer
-      level: 80%
+      level: Expert
+    - name: AWS
+      level: Expert
     - name: Docker
-      level: 85%
-    - name: GitLab CI/CD
-      level: 80%
-    - name: Azure DevOps CI/CD
-      level: 80%
-    - name: AWS [Beanstalk, EC2, RDS, S3, Route53, CloudFront]
-      level: 80%
-    - name: Agile
-      level: 85%
+      level: Expert
+    - name: Linux
+      level: Expert
+    - name: CI/CD
+      level: Expert
+    - name: Bash
+      level: Intermediate
+    - name: JavaScript
+      level: Intermediate
+    - name: Python
+      level: Intermediate
 
 footer: >
   Hosted with <i class="fas fa-heart"></i> by <a href="http://pages.github.com" target="_blank" rel="nofollow">GitHub</a>
