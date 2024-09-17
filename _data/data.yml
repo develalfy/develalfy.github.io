@@ -4,14 +4,14 @@ sidebar:
 
   # Profile information
   name: Ashraf Elalfi
-  tagline: Backend Software Engineer and Leader at Slack platform community Cairo chapter.
+  tagline: Backend Software Engineer | PHP
 
   avatar: profile.png  # Place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
   # Sidebar links
   email: iam@develalfy.me
   phone: +60 11-2553-8663
-  website: develalfy.me #do not add http://
+  website: develalfy.me # do not add http://
   linkedin: develalfy
   github: develalfy
   telegram: # add your nickname without '@' sign
@@ -30,30 +30,31 @@ sidebar:
       level: Very Good
 
   interests:
-    - item: DevOps
+    - item: Video games
       link:
-    - item: Automation
+
+    - item: DevOps
       link:
 
 career-profile:
   title: Career Profile
   summary: |
     Backend software engineer and CSD® experienced in building web applications following agile serving lots of users with a passion for automation.
-    Working with multicultural and international teams. You can [download my CV](https://develalfy.me/cv.pdf).
+    Working with multicultural and international teams.
 
 education:
   - degree: Bachelor in Computer Science
     university: Egypt Higher Institute of Engineering and Technology
     time: 2012 - 2015
     details: |
-      Focused on Computer Science and Communications. EU Blue Card eligible degree.
+      BSc Computer Science and Communications. EU Blue Card eligible university & degree.
 
 volunteers:
   - role: Cairo Chapter Leader
     time: 2020 - Present
     company: Slack platform community, Cairo, Egypt
     details: |
-      Managing and leading the Cairo chapter of the Slack platform community. Learn more [here](https://slackcommunity.com/cairo/).
+      Managing and leading the Cairo chapter of the Slack platform community.
 
 experiences:
   - role: Backend Software Engineer | PHP
@@ -61,22 +62,51 @@ experiences:
     company: Sam Media, Kuala Lumpur, Malaysia
     details: |
       Developing, refactoring, and enhancing connections between our platform and 90 different mobile network operators with about more than 1.5 million subscribers. 
-      Technologies used include PHP, MySQL, CI/CD, GitLab, Jenkins, Sentry, Kibana, Docker.
+      Technologies used include PHP, MySql, CI/CD, Gitlab, Jenkins, Sentry, Kibana, Docker.
 
   - role: Backend Software Engineer & Squad Lead
     time: November 2018 - August 2022
     company: Areeb Technology, Cairo, Egypt
     details: |
-      Lead the squad to achieve every sprint goal for about a year. Developed generic components and refactored core features in this large investment project.
-      Increased Unit testing code coverage to 40% from scratch. Automated the process of Integration and Deployment.
-      Technologies used include Laravel, MySQL, Postman, PHPUnit, Mockery, Pair-Mob programming, Azure DevOps, CI, CD, Git-Flow, AWS.
+      Led the squad to achieve every sprint goal for about a year. Developed generic components and refactored core features in this large investment project. Increased Unit testing code coverage to 40% from scratch. Automated the process of Integration and Deployment.
+      Technologies used include Laravel, MySql, Postman, PHPUnit, Mockery, Pair-Mob programming, Azure DevOps, CI, CD, Git-Flow.
 
   - role: Backend Software Engineer
     time: November 2017 - November 2018
     company: Robusta Studio, Cairo, Egypt
     details: |
-      Developed several web applications like Mountain View, Faragalla, DAN, Gazef, Trackmena, Couponat, Supermama, Coach to Win, Go Bus, Coast82, and AXA. 
-      Technologies used include Laravel, PHP, MySQL, PostgreSQL, AWS, Docker, JavaScript, WordPress.
+      Developed several web applications like Mountain view, Faragalla, DAN, Gazef, Trackmena, Couponat, Supermama, Coach to win, Go bus, Coast82, and AXA.
+      Technologies used include Laravel, PHP, MySql, PostgreSql, AWS, Docker, Javascript, WordPress.
+
+  - role: Backend Software Engineer
+    time: May 2017 - October 2017
+    company: Botler.io, Remote, Dubai
+    details: |
+      Worked on a chatbot service for companies. Technologies used include Laravel, Docker.
+
+  - role: Backend Software Engineer
+    time: October 2015 - March 2017
+    company: Ousta Technologies, Cairo, Egypt
+    details: |
+      Part of the backend team, produced a platform with SaaS architectures and DevOps, resulting in a successful product and Agile culture using cutting-edge technologies such as Amazon Web Services (AWS), Jenkins, API Gateway, NGINX, JavaScript/Typescript, Docker, PHP, JIRA.
+
+  - role: Backend Software Engineer
+    time: July 2014 - September 2015
+    company: E-motion digital agency, Cairo, Egypt
+    details: |
+      Developed several web applications like Ceramica Innova, MediGroup, Egec, Universal, Suprimo. Technologies used include PHP, MySql, Zendframework2.
+
+  - role: Co-Founder & Backend Software Engineer
+    time: September 2013 - July 2014
+    company: Ieasoft, Mansoura, Egypt
+    details: |
+      Co-Founded and developed several web applications using HTML, CSS, JavaScript, PHP, Laravel, MySql.
+
+  - role: Backend Software Engineer
+    time: April 2013 - September 2013
+    company: Emagile, Mansoura, Egypt
+    details: |
+      Developed several web applications using HTML, CSS, JavaScript, PHP, MySql.
 
 skills:
   title: Skills & Proficiency
@@ -129,4 +159,3 @@ skills:
 
 footer: >
   Hosted with <i class="fas fa-heart"></i> by <a href="http://pages.github.com" target="_blank" rel="nofollow">GitHub</a>
-  
