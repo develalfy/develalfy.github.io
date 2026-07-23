@@ -32,6 +32,10 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="googlebot" content="index, follow">
 
+  <!-- Override jekyll-seo-tag defaults for a personal profile site -->
+  <meta property="og:type" content="profile">
+  <meta name="twitter:card" content="summary_large_image">
+
   <!-- Person JSON-LD: overrides jekyll-seo-tag's WebSite for a personal site -->
   {%- assign p = site.data.data.sidebar -%}
   <script type="application/ld+json">
