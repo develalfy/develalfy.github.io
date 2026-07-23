@@ -6,38 +6,32 @@
   <meta name="theme-color" content="#08090a">
   <meta name="color-scheme" content="dark">
 
-  {#- Favicons + Apple touch icon -#}
+  <!-- Favicons -->
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 
-  {#- Fonts: Inter (UI) + JetBrains Mono (terminal-flavored code labels) -#}
+  <!-- Fonts: Inter + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  {#- Jekyll SEO tag owns <title>, <meta name="description">, canonical, OG, Twitter, JSON-LD.
-      Site title/long-title/description live in _config.yml. -#}
-  {% seo %}
+  <!-- Jekyll SEO tag emits title, description, canonical, og:*, twitter:*, WebSite JSON-LD -->
+  {%- seo -%}
 
-  {#- Ensure OG image, OG type, Twitter card, and explicit robots are always present.
-      jekyll-seo-tag emits og:image ONLY when `logo:` or `image:` is set in _config.yml;
-      we set it explicitly below so this page has a working social card. -#}
+  <!-- OG image dimensions + alt (jekyll-seo-tag doesn't emit these) -->
   <meta property="og:image" content="{{ site.url }}{{ '/assets/images/og.png' | relative_url }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{{ site.title }} — {{ site.tagline }}">
-  <meta property="og:type" content="profile">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ site.url }}{{ '/assets/images/og.png' | relative_url }}">
+
+  <!-- Explicit robots -->
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="googlebot" content="index, follow">
 
-  {#- Person JSON-LD. jekyll-seo-tag emits WebSite by default; for a personal site
-      we want Person with jobTitle/knowsAbout/sameAs/hasOccupationName.
-      Renders AFTER {% seo %} so the structured-data parser keeps this Person and ignores the WebSite. -#}
+  <!-- Person JSON-LD: overrides jekyll-seo-tag's WebSite for a personal site -->
   {%- assign p = site.data.data.sidebar -%}
   <script type="application/ld+json">
   {
