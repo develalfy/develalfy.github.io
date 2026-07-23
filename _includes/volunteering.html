@@ -1,0 +1,33 @@
+{% assign volunteers = site.data.data.volunteers %}
+{% assign education = site.data.data.education %}
+<section class="tile tile-light" id="volunteering">
+  <div class="wrap-text">
+    <header class="tile-headline">
+      <h2 class="t-display">Community &amp; education.</h2>
+    </header>
+
+    <div class="list-section">
+      {% for volunteer in volunteers %}
+      <div class="list-row">
+        <div>
+          <div class="role">{{ volunteer.role }}</div>
+          <div class="org">{{ volunteer.company }}</div>
+          {% if volunteer.details %}<p style="font-size:14px;color:var(--ink-muted-80);margin:8px 0 0;line-height:1.5;">{{ volunteer.details | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+        </div>
+        <div class="when">{{ volunteer.time }}</div>
+      </div>
+      {% endfor %}
+
+      {% for grad in education %}
+      <div class="list-row">
+        <div>
+          <div class="role">{{ grad.degree }}</div>
+          <div class="org">{{ grad.university }}</div>
+          {% if grad.details %}<p style="font-size:14px;color:var(--ink-muted-80);margin:8px 0 0;line-height:1.5;">{{ grad.details | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+        </div>
+        <div class="when">{{ grad.time }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
