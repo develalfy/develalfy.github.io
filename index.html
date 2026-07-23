@@ -3,155 +3,204 @@ layout: default
 ---
 {% assign s = site.data.data.sidebar %}
 {% assign exp = site.data.data.experiences %}
-{% assign sk = site.data.data.skills %}
+{% assign stats = site.data.data.stats %}
+{% assign summary = site.data.data.summary %}
+{% assign ai = site.data.data.ai %}
+{% assign skills = site.data.data.skills %}
 {% assign edu = site.data.data.education %}
 {% assign vol = site.data.data.volunteers %}
 
-<article class="cv">
-  <header class="cv-head">
-    <h1 class="cv-name">{{ s.name }}</h1>
-    <p class="cv-role">{{ s.tagline }}</p>
-    <p class="cv-meta">
-      {{ s.location }}
-      <span class="sep">·</span>
-      <a href="mailto:{{ s.email }}">{{ s.email }}</a>
-      <span class="sep">·</span>
-      <a href="https://github.com/{{ s.github }}" target="_blank" rel="noopener">github.com/{{ s.github }}</a>
-      <span class="sep">·</span>
-      <a href="https://linkedin.com/in/{{ s.linkedin }}" target="_blank" rel="noopener">linkedin.com/in/{{ s.linkedin }}</a>
-    </p>
-  </header>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="terminal" aria-hidden="false" role="region" aria-label="Terminal introduction">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">~/develalfy — zsh</span>
+      </div>
+      <pre class="terminal-body"><code><span class="prompt">$</span> <span class="cmd">whoami</span>
+<span class="out">{{ s.name }}</span>
+<span class="prompt">$</span> <span class="cmd">cat role.txt</span>
+<span class="out">{{ s.tagline }}</span>
+<span class="prompt">$</span> <span class="cmd">whereami</span>
+<span class="out">{{ s.location }}</span>
+<span class="prompt">$</span> <span class="cmd">contact --email</span>
+<span class="out">{{ s.email }}</span>
+<span class="prompt">$</span> <span class="cursor">▍</span></code></pre>
+    </div>
 
-  <section class="cv-section">
-    <h2>Experience</h2>
-    <ul class="cv-list">
+    <h1 class="hero-title">
+      I build the backends that <span class="grad">don't go down</span>,<br>
+      and the AI tooling that <span class="grad">make teams 2–3× faster</span>.
+    </h1>
+
+    <p class="hero-lead">{{ summary | strip_newlines }}</p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="mailto:{{ s.email }}">Get in touch</a>
+      <a class="btn btn-ghost btn-lg" href="{{ s.cv_pdf | relative_url }}" target="_blank" rel="noopener">Download CV</a>
+    </div>
+
+    <div class="stats-grid">
+      {% for st in stats %}
+        <div class="stat">
+          <div class="stat-value">{{ st.value }}</div>
+          <div class="stat-label">{{ st.label }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow mono">// 01 — experience</span>
+      <h2 class="section-title">Where I've shipped</h2>
+      <p class="section-sub">10 years of production work, newest first. Each role includes the stack so you can scan fast.</p>
+    </header>
+
+    <ol class="timeline">
       {% for e in exp %}
-      <li>
-        <div class="cv-item-head">
-          <div>
-            <div class="cv-item-title">{{ e.role }}</div>
-            <div class="cv-item-org">{{ e.company }}</div>
-          </div>
-          <div class="cv-item-when">{{ e.time }}</div>
-        </div>
-        {% if e.details %}
-          {% assign parts = e.details | split: "Stack:" %}
-          {% assign bullets_raw = parts[0] %}
-          {% if bullets_raw != "" %}
-          <div class="cv-item-desc">
-            <ul>
-              {%- assign lines = bullets_raw | newline_to_br | split: "<br />" -%}
-              {%- for line in lines -%}
-                {%- assign trimmed = line | strip -%}
-                {%- assign first_char = trimmed | slice: 0, 1 -%}
-                {%- if first_char == "-" -%}
-                  {%- assign bullet_text = trimmed | remove_first: "-" | strip -%}
-                  {%- if bullet_text != "" -%}<li>{{ bullet_text }}</li>{%- endif -%}
-                {%- endif -%}
-              {%- endfor -%}
-            </ul>
-          </div>
-          {% endif %}
-          {% assign stack_raw = parts[1] | strip | remove: "." %}
-          {% if stack_raw contains "," %}
-          <div class="cv-item-stack">Stack: {{ stack_raw }}</div>
-          {% endif %}
-        {% endif %}
-      </li>
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article class="exp-card">
+            <header class="exp-head">
+              <div class="exp-titles">
+                <h3 class="exp-role">{{ e.role }}</h3>
+                <div class="exp-org">{{ e.company }}<span class="exp-loc"> · {{ e.location }}</span></div>
+              </div>
+              <div class="exp-time mono">{{ e.time }}</div>
+            </header>
+
+            {% if e.highlights %}
+              <ul class="exp-list">
+                {% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}
+              </ul>
+            {% endif %}
+
+            {% if e.stack %}
+              <ul class="stack-row">
+                {% for t in e.stack %}<li class="chip">{{ t }}</li>{% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        </li>
       {% endfor %}
-    </ul>
-  </section>
+    </ol>
+  </div>
+</section>
 
-  <section class="cv-section">
-    <h2>Skills</h2>
-    <p class="cv-skills">
-      <strong>Production:</strong>
-      {%- assign first = true -%}
-      {%- for t in sk.toolset -%}
-        {%- if t.level == "Expert" or t.level == "Advanced" -%}
-          {%- if first == false %}, {% endif -%}
-          {{ t.name }}
-          {%- assign first = false -%}
-        {%- endif -%}
-      {%- endfor -%}
-      {%- assign prod_count = 0 -%}
-      {%- for t in sk.toolset -%}{%- if t.level == "Expert" or t.level == "Advanced" -%}{%- assign prod_count = prod_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
-      {%- assign int_count = 0 -%}
-      {%- for t in sk.toolset -%}{%- if t.level != "Expert" and t.level != "Advanced" -%}{%- assign int_count = int_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
-      {%- if int_count > 0 %} · <strong>Working knowledge:</strong>
-        {%- assign first2 = true -%}
-        {%- for t in sk.toolset -%}
-          {%- if t.level != "Expert" and t.level != "Advanced" -%}
-            {%- if first2 == false %}, {% endif -%}
-            {{ t.name }}
-            {%- assign first2 = false -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif %}
-    </p>
-  </section>
+<!-- AI WORK -->
+<section id="ai" class="section section-ai">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow mono">// 02 — currently building with AI</span>
+      <h2 class="section-title">AI as a leverage layer</h2>
+      <p class="section-sub">{{ ai.intro | strip_newlines }}</p>
+    </header>
 
-  <section class="cv-section">
-    <h2>Projects</h2>
-    <ul class="cv-projects">
-      <li>
-        <div class="cv-project-title">Calora <span class="cv-project-tag">SaaS · live</span></div>
-        <p class="cv-project-desc">Photo-first calorie tracking with AI food recognition, 12-week goals, iOS PWA. <a href="https://calora.develalfy.me" target="_blank" rel="noopener">calora.develalfy.me</a></p>
-      </li>
-      <li>
-        <div class="cv-project-title">Specboard <span class="cv-project-tag">Open source</span></div>
-        <p class="cv-project-desc">Lightweight Jira alternative for solo + small engineering teams. Spec-first, AI-assisted, Postgres-native. <a href="https://github.com/develalfy/specboard" target="_blank" rel="noopener">github.com/develalfy/specboard</a></p>
-      </li>
-      <li>
-        <div class="cv-project-title">SAMurAI <span class="cv-project-tag">Internal · Sam Media</span></div>
-        <p class="cv-project-desc">n8n + GitLab CI pipeline that auto-reviews merge requests and posts inline bug-flagging comments.</p>
-      </li>
-      <li>
-        <div class="cv-project-title">SAM Assistant <span class="cv-project-tag">Internal · Sam Media</span></div>
-        <p class="cv-project-desc">Slack bot for natural-language queries against production databases, used by both engineering and non-technical staff.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="cv-section">
-    <h2>Education</h2>
-    <ul class="cv-list">
-      {% for e in edu %}
-      <li>
-        <div class="cv-item-head">
-          <div>
-            <div class="cv-item-title">{{ e.degree }}</div>
-            <div class="cv-item-org">{{ e.university }}</div>
+    <div class="ai-grid">
+      {% for p in ai.projects %}
+        <article class="ai-card">
+          <div class="ai-card-head">
+            <span class="ai-kind mono">{{ p.kind }}</span>
+            <span class="ai-arrow" aria-hidden="true">↗</span>
           </div>
-          <div class="cv-item-when">{{ e.time }}</div>
-        </div>
-        {% if e.details %}<div class="cv-item-desc">{{ e.details | markdownify }}</div>{% endif %}
-      </li>
+          <h3 class="ai-name">{{ p.name }}</h3>
+          <p class="ai-tagline">{{ p.tagline }}</p>
+          <ul class="stack-row">
+            {% for t in p.stack %}<li class="chip chip-accent">{{ t }}</li>{% endfor %}
+          </ul>
+        </article>
       {% endfor %}
-    </ul>
-  </section>
+    </div>
+  </div>
+</section>
 
-  {% if vol and vol.size > 0 %}
-  <section class="cv-section">
-    <h2>Community</h2>
-    <ul class="cv-list">
-      {% for v in vol %}
-      <li>
-        <div class="cv-item-head">
-          <div>
-            <div class="cv-item-title">{{ v.role }}</div>
-            <div class="cv-item-org">{{ v.company }}</div>
-          </div>
-          <div class="cv-item-when">{{ v.time }}</div>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow mono">// 03 — toolbox</span>
+      <h2 class="section-title">What I reach for</h2>
+      <p class="section-sub">Production-grade by default. Anything below is a working-knowledge stretch.</p>
+    </header>
+
+    <div class="skills-cols">
+      <div class="skills-col">
+        <div class="skills-col-head">
+          <span class="dot dot-green"></span>
+          <span>Production</span>
+          <span class="skills-count mono">{{ skills.production | size }}</span>
         </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
+        <ul class="chips">
+          {% for t in skills.production %}<li class="chip">{{ t }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="skills-col">
+        <div class="skills-col-head">
+          <span class="dot dot-amber"></span>
+          <span>Working knowledge</span>
+          <span class="skills-count mono">{{ skills.working | size }}</span>
+        </div>
+        <ul class="chips">
+          {% for t in skills.working %}<li class="chip">{{ t }}</li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer class="cv-foot">
-    <span>Updated {{ site.time | date: "%B %Y" }}</span>
-    <span><a href="{{ site.baseurl }}/Alfy_Backend_Developer_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></span>
-  </footer>
-</article>
+<!-- EDUCATION + COMMUNITY -->
+<section class="section">
+  <div class="container two-col">
+    <div>
+      <header class="section-head left">
+        <span class="section-eyebrow mono">// 04 — education</span>
+        <h2 class="section-title small">Education</h2>
+      </header>
+      <ul class="plain-list">
+        {% for e in edu %}
+          <li class="plain-item">
+            <div class="plain-title">{{ e.degree }}</div>
+            <div class="plain-sub">{{ e.university }}</div>
+            <div class="plain-meta mono">{{ e.time }}</div>
+            {% if e.note %}<p class="plain-note">{{ e.note }}</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <header class="section-head left">
+        <span class="section-eyebrow mono">// 05 — community</span>
+        <h2 class="section-title small">Community</h2>
+      </header>
+      <ul class="plain-list">
+        {% for v in vol %}
+          <li class="plain-item">
+            <div class="plain-title">{{ v.role }}</div>
+            <div class="plain-sub">{{ v.org }}</div>
+            <div class="plain-meta mono">{{ v.time }}</div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-contact">
+  <div class="container contact-inner">
+    <span class="section-eyebrow mono">// 06 — contact</span>
+    <h2 class="contact-title">Looking for a senior backend engineer who ships AI tooling?</h2>
+    <p class="contact-lead">Open to senior backend and AI engineering roles globally. Currently based in Kuala Lumpur.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="mailto:{{ s.email }}">Email — {{ s.email }}</a>
+      <a class="btn btn-ghost btn-lg" href="https://github.com/{{ s.github }}" target="_blank" rel="noopener">github.com/{{ s.github }}</a>
+    </div>
+  </div>
+</section>

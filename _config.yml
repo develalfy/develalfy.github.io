@@ -1,27 +1,24 @@
 ---
-# Apple-style Jekyll CV — minimal & scannable
+# develalfy.me — Senior Backend Engineer + AI Builder
 title: Ashraf Elalfi
 description: Senior Backend Engineer (PHP/Laravel) · AI Automation Builder · 1.5M+ Users · CSD®
-tagline: Senior Backend Engineer (PHP/Laravel) · AI Automation Builder · 1.5M+ Users · CSD®
+tagline: Senior Backend Engineer. AI Automation Builder.
 baseurl: '/'
 url: 'https://develalfy.me'
 lang: en
 
 permalink: /:title/
 
-# Site features
 markdown: kramdown
 highlighter: rouge
 compress_html: true
 sass:
   style: compressed
 
-# Plugins
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Custom values
 author:
   name: Ashraf Elalfi
   email: iam@develalfy.me
