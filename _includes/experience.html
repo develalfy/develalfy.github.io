@@ -1,0 +1,43 @@
+{% assign experiences = site.data.data.experiences %}
+<section class="tile tile-dark" id="experience">
+  <div class="wrap-text">
+    <header class="tile-headline">
+      <p class="t-caption-strong" style="color:var(--primary-on-dark);text-transform:uppercase;letter-spacing:0.1em;margin:0 0 12px;">Experience</p>
+      <h2 class="t-display" style="color:var(--on-dark);">10+ years shipping production systems at scale.</h2>
+      <p class="t-lead" style="color:var(--on-dark-muted);max-width:660px;margin:16px auto 0;">From greenfield Laravel to a high-availability telecom billing platform serving 1.5M+ subscribers across 90+ operators.</p>
+    </header>
+
+    <div class="exp-list">
+      {% for experience in experiences %}
+      <article class="exp-item">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role">{{ experience.role }}</div>
+            <div class="exp-company">{{ experience.company }}</div>
+          </div>
+          <div class="exp-time">{{ experience.time }}</div>
+        </div>
+
+        {% if experience.details %}
+        <div class="exp-bullets">
+          {{ experience.details | markdownify }}
+        </div>
+        {% endif %}
+
+        {% assign stack_raw = experience.details | split: "Stack:" | last %}
+        {% if stack_raw contains "," %}
+        <div class="exp-stack">
+          {% assign items = stack_raw | split: "," %}
+          {% for item in items limit:14 %}
+            {% assign tag = item | strip | remove_first: "- " | strip %}
+            {% if tag != "" and tag.size < 30 %}
+              <span>{{ tag | remove: "." }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

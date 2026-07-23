@@ -1,0 +1,19 @@
+{% assign p = site.data.data.sidebar %}
+<section class="hero" id="top">
+  <div class="wrap">
+    <img class="avatar" src="{{ site.baseurl }}/assets/images/profile.jpg" alt="{{ p.name }}" width="120" height="120">
+    <h1 class="name">{{ p.name }}</h1>
+    <p class="tagline">{{ p.tagline }}</p>
+    <div class="meta-row">
+      <span>{{ p.location }}</span>
+      <span class="dot">·</span>
+      <span>Open to senior backend &amp; AI engineering roles</span>
+      <span class="dot">·</span>
+      <span>CSD® Certified</span>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-pill" href="#contact">Get in touch</a>
+      <a class="btn btn-ghost" href="{{ site.baseurl }}/Alfy_Backend_Developer_CV.pdf" target="_blank" rel="noopener">Download CV <span class="chev">›</span></a>
+    </div>
+  </div>
+</section>
