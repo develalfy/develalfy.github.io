@@ -1,8 +1,16 @@
 ---
 # develalfy.me — Senior Backend Engineer + AI Builder
 title: Ashraf Elalfi
-description: Senior Backend Engineer (PHP/Laravel) · AI Automation Builder · 1.5M+ Users · CSD®
+title_separator: ' | '
+description: >-
+  Senior Backend Engineer (PHP/Laravel) with 10+ years shipping production
+  systems at scale, including a telecom billing platform serving 1.5M+ active
+  subscribers across 90+ mobile network operators. Currently building AI
+  tooling that makes engineering teams 2–3× more productive.
 tagline: Senior Backend Engineer. AI Automation Builder.
+author:
+  name: Ashraf Elalfi
+  email: iam@develalfy.me
 baseurl: '/'
 url: 'https://develalfy.me'
 lang: en
@@ -19,6 +27,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-author:
+# Social / SEO
+logo: /assets/images/og.png
+twitter:
+  username: develalfy
+  card: summary_large_image
+social:
   name: Ashraf Elalfi
-  email: iam@develalfy.me
+  links:
+    - https://github.com/develalfy
+    - https://linkedin.com/in/develalfy
+    - https://twitter.com/develalfy

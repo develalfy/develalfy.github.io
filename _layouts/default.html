@@ -3,21 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{{ site.description | escape }}">
+  <meta name="theme-color" content="#08090a">
+  <meta name="color-scheme" content="dark">
 
+  {#- Favicons + Apple touch icon -#}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 
-  {%- comment -%} Fonts: Inter (UI) + JetBrains Mono (terminal-flavored code labels) {%- endcomment -%}
+  {#- Fonts: Inter (UI) + JetBrains Mono (terminal-flavored code labels) -#}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
+  {#- Jekyll SEO tag owns <title>, <meta name="description">, canonical, OG, Twitter, JSON-LD.
+      Site title/long-title/description live in _config.yml. -#}
   {% seo %}
+
+  {#- Ensure OG image, OG type, Twitter card, and explicit robots are always present.
+      jekyll-seo-tag emits og:image ONLY when `logo:` or `image:` is set in _config.yml;
+      we set it explicitly below so this page has a working social card. -#}
+  <meta property="og:image" content="{{ site.url }}{{ '/assets/images/og.png' | relative_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ site.title }} — {{ site.tagline }}">
+  <meta property="og:type" content="profile">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ site.url }}{{ '/assets/images/og.png' | relative_url }}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
+
+  {#- Person JSON-LD. jekyll-seo-tag emits WebSite by default; for a personal site
+      we want Person with jobTitle/knowsAbout/sameAs/hasOccupationName.
+      Renders AFTER {% seo %} so the structured-data parser keeps this Person and ignores the WebSite. -#}
+  {%- assign p = site.data.data.sidebar -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.title }}",
+    "givenName": "Ashraf",
+    "familyName": "Elalfi",
+    "alternateName": "develalfy",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}{{ '/assets/images/og.png' | relative_url }}",
+    "jobTitle": "Senior Backend Engineer",
+    "description": "{{ site.description | escape }}",
+    "email": "mailto:{{ p.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kuala Lumpur",
+      "addressCountry": "MY"
+    },
+    "knowsAbout": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+      "RabbitMQ",
+      "Redis",
+      "n8n",
+      "AI automation",
+      "CI/CD",
+      "system design"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Senior Backend Engineer",
+      "occupationLocation": {
+        "@type": "City",
+        "name": "Kuala Lumpur"
+      },
+      "skills": "PHP, Laravel, MySQL, PostgreSQL, AWS, Docker, RabbitMQ, Redis"
+    },
+    "sameAs": [
+      "https://github.com/{{ p.github }}",
+      "https://linkedin.com/in/{{ p.linkedin }}",
+      "https://twitter.com/{{ p.twitter | remove: '@' }}"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Misr Higher Institute for Engineering and Technology"
+    }
+  }
+  </script>
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -26,9 +99,9 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="{{ '/' | relative_url }}" class="brand" aria-label="Ashraf Elalfi — home">
-        <span class="brand-mark">{{ site.data.data.sidebar.initials }}</span>
-        <span class="brand-name">{{ site.data.data.sidebar.name }}</span>
-        <span class="brand-status"><span class="dot"></span>{{ site.data.data.sidebar.status }}</span>
+        <span class="brand-mark">{{ p.initials }}</span>
+        <span class="brand-name">{{ p.name }}</span>
+        <span class="brand-status"><span class="dot"></span>{{ p.status }}</span>
       </a>
       <nav class="header-nav" aria-label="Primary">
         <a href="#experience">Experience</a>
@@ -37,8 +110,8 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-cta">
-        <a class="btn btn-ghost" href="https://github.com/{{ site.data.data.sidebar.github }}" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-primary" href="mailto:{{ site.data.data.sidebar.email }}">Hire me</a>
+        <a class="btn btn-ghost" href="https://github.com/{{ p.github }}" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="mailto:{{ p.email }}">Hire me</a>
       </div>
     </div>
   </header>
@@ -50,15 +123,15 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <span class="muted">© {{ site.time | date: '%Y' }} {{ site.data.data.sidebar.name }}</span>
+        <span class="muted">© {{ site.time | date: '%Y' }} {{ p.name }}</span>
         <span class="muted mono">~/kuala-lumpur</span>
       </div>
       <div class="footer-right">
-        <a href="https://linkedin.com/in/{{ site.data.data.sidebar.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://linkedin.com/in/{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
         <span class="sep">·</span>
-        <a href="https://twitter.com/{{ site.data.data.sidebar.twitter | remove: '@' }}" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://twitter.com/{{ p.twitter | remove: '@' }}" target="_blank" rel="noopener">Twitter</a>
         <span class="sep">·</span>
-        <a href="{{ site.data.data.sidebar.cv_pdf | relative_url }}" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="{{ p.cv_pdf | relative_url }}" target="_blank" rel="noopener">CV (PDF)</a>
       </div>
     </div>
   </footer>
