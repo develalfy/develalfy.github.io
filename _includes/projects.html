@@ -1,38 +1,46 @@
-{% assign projects = site.data.data.projects %}
-{% if projects %}
-<section class="section projects-section">
+<section class="tile tile-parch" id="projects">
+  <div class="wrap-text">
+    <header class="tile-headline">
+      <p class="t-caption-strong" style="color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;margin:0 0 12px;">Things I've built</p>
+      <h2 class="t-display">Side projects, AI tooling, and SaaS.</h2>
+      <p class="t-lead" style="color:var(--ink-muted-80);max-width:620px;margin:16px auto 0;">Beyond my day job, I ship things that solve real problems — for my team and for the wider PHP/Laravel community.</p>
+    </header>
 
-  <h2 class="section-title">
-    <span class="fa-stack fa-xs">
-      <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
-    </span>
-    {{ projects.title }}
-  </h2>
+    <div class="project-grid">
+      <a class="project-card" href="https://calora.develalfy.me" target="_blank" rel="noopener">
+        <span class="tag">SaaS · Live</span>
+        <h3 class="title">Calora</h3>
+        <p class="desc">Calorie tracking with photo-first meal capture. AI food recognition, 12-week goals, iOS PWA. Shipped to TestFlight, iterating privately.</p>
+        <span class="arrow">View project ›</span>
+      </a>
 
-  {% if projects.intro %}
-  <div class="intro">
-      <p>{{ projects.intro }}</p>
-  </div><!--//intro-->
-  {% endif %}
+      <a class="project-card" href="https://github.com/develalfy/specboard" target="_blank" rel="noopener">
+        <span class="tag">Open Source</span>
+        <h3 class="title">Specboard</h3>
+        <p class="desc">A lighter alternative to Jira for solo + small engineering teams. Spec-first, AI-assisted, Postgres-native. Built as my answer to Jira-fatigue.</p>
+        <span class="arrow">View on GitHub ›</span>
+      </a>
 
-  {% for project in projects.assignments %}
-    <div class="item">
+      <a class="project-card" href="#experience">
+        <span class="tag">Internal · Sam Media</span>
+        <h3 class="title">SAMurAI</h3>
+        <p class="desc">n8n + GitLab CI pipeline that auto-reviews merge requests and posts inline GitLab comments flagging potential bugs before a human looks at it.</p>
+        <span class="arrow">Read more ›</span>
+      </a>
 
-      <span class="project-title">
-        {% if project.link %}
-        <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
-        {% else %}
-        {{ project.title }}
-        {% endif %}
-      </span>
+      <a class="project-card" href="#experience">
+        <span class="tag">Internal · Sam Media</span>
+        <h3 class="title">SAM Assistant</h3>
+        <p class="desc">Slack bot for natural-language queries against production databases. Adopted by both engineering and non-technical staff across departments.</p>
+        <span class="arrow">Read more ›</span>
+      </a>
 
-      {% if project.tagline %}
-      - <span class="project-tagline">{{ project.tagline }}</span>
-      {% endif %}
-
-    </div><!--//item-->
-  {% endfor %}
-
-</section><!--//section-->
-{% endif %}
+      <a class="project-card" href="https://github.com/develalfy" target="_blank" rel="noopener">
+        <span class="tag">More</span>
+        <h3 class="title">Other experiments</h3>
+        <p class="desc">PHPUnit generators, prompt libraries, and assorted weekend tools. Public repos on GitHub.</p>
+        <span class="arrow">Browse GitHub ›</span>
+      </a>
+    </div>
+  </div>
+</section>

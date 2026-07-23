@@ -69,15 +69,16 @@ education:
 volunteers:
   - role: Cairo Chapter Leader
     company: Slack platform community, Cairo, Egypt
+    time: 2019 - 2022
     details: |
-      Managing and leading the Cairo chapter of the Slack platform community.
+      Managing and leading the Cairo chapter of the Slack platform community — running events, onboarding new members, and connecting Cairo-based developers building on Slack.
 
   - role: Core Member
-    time:
+    time: 2015 - 2018
     company: DevMix
 
   - role: Founder
-    time:
+    time: 2013 - 2018
     company: IT-Geeks
 
 experiences:
