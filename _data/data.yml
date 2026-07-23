@@ -4,49 +4,64 @@ sidebar:
 
   # Profile information
   name: Ashraf Elalfi
-  tagline: Backend Software Engineer | PHP
+  tagline: Senior Backend Engineer (PHP/Laravel) · AI Automation Builder · 1.5M+ Users · CSD®
+  location: Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia
 
   avatar: profile.png  # Place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
   # Sidebar links
   email: iam@develalfy.me
-  phone: +60 11-2553-8663
+  phone: +601125538663
   website: develalfy.me # do not add http://
   linkedin: develalfy
   github: develalfy
-  telegram: 
+  telegram:
   gitlab:
   bitbucket:
   twitter: '@develalfy'
-  stack-overflow: 
+  stack-over-flow:
   codewars:
-  goodreads: 
+  goodreads:
 
   languages:
     - idiom: Arabic
-      level: Native
+      level: Native or Bilingual
 
     - idiom: English
-      level: Very Good
+      level: Full Professional
 
     - idiom: German
-      level: Beginner
+      level: Elementary
+
+    - idiom: French
+      level: Elementary
 
   interests:
     - item: Video games
     - item: GYM
     - item: Football
 
+  top-skills:
+    - Technical Leadership
+    - Prompt Engineering
+    - Python (Programming Language)
+
 career-profile:
   title: Career Profile
   summary: |
-    Backend software engineer and CSD® experienced in building web applications following agile serving lots of users with a passion for automation.
-    Working with multicultural and international teams. I have a strong background in PHP, Laravel, MySQL, AWS, Docker, and CI/CD.
+    Senior Backend Engineer with 10+ years shipping production systems at scale — including a telecom billing platform serving 1.5M+ active subscribers across 90+ mobile network operators. I build reliable, high-availability backends and I automate the repetitive parts so engineering teams ship faster.
+
+    My stack is PHP/Laravel, MySQL/PostgreSQL, AWS, Docker, RabbitMQ, and Redis. I've built test suites from scratch (0% → ~50% coverage across 21,000+ lines), designed duplicate-prevention systems for payment gateways, and debugged async queue misconfigurations that were causing 20+ daily Sentry errors in production. I hold a Certified Scrum Developer (CSD®) credential and I've led engineering squads delivering 100% of sprint goals with zero critical regressions.
+
+    What sets me apart right now: I build AI tooling that makes engineering teams 2–3x more productive. I created SAMurAI — an n8n-powered CI pipeline that auto-reviews merge requests and posts inline GitLab comments. I founded an internal AI Agent Skills Hub (7 team-contributed skills) and built a Slack bot that lets non-technical teammates query production databases in plain English. I'm currently based in Kuala Lumpur and open to senior backend and AI engineering roles globally.
+
+    Feel free to connect or reach me at iam@develalfy.me.
+
     You can download my CV from [Here](https://develalfy.me/Alfy_Backend_Developer_CV.pdf).
 
 education:
-  - degree: Bachelor in Computer Science
-    university: Egypt Higher Institute of Engineering and Technology
+  - degree: Bachelor's Degree, Computer Science
+    university: Misr Higher Institute for Engineering and Technology
     time: 2012 - 2015
     details: |
       BSc Computer Science and Communications. EU Blue Card eligible university & degree.
@@ -58,70 +73,81 @@ volunteers:
       Managing and leading the Cairo chapter of the Slack platform community.
 
   - role: Core Member
-    time: 
+    time:
     company: DevMix
 
   - role: Founder
-    time: 
+    time:
     company: IT-Geeks
 
 experiences:
-  - role: Backend Software Engineer | PHP
-    time: August 2022 - Present
-    company: SamMedia, Kuala Lumpur, Malaysia
+  - role: Senior Software Engineer
+    time: August 2022 - Present (4 years)
+    company: Sam Media, WP. Kuala Lumpur
     details: |
-      - Developing, refactoring, and enhancing connections between our platform and 90 different mobile network operators with about more than 1.5 million subscribers.
-      - Technologies used include: PHP, MySql, CI/CD, Gitlab, Jenkins, Sentry, Kibana, Docker.
+      - Own production integrations with 90+ mobile network operators, maintaining 1.5M+ active subscribers on a PHP/Laravel high-availability billing platform.
+      - Built PHPUnit test suite from zero across 20+ architectural layers — authored hundreds of test files covering 21,000+ lines, elevating overall codebase coverage to ~50%.
+      - Engineered a 3-layer duplicate-subscription prevention system (DB partial unique index + model lock + global guard) for Italian XRAcademy payment gateway, resolving 8 active duplicate subscriptions.
+      - Built SAMurAI: AI-powered CI pipeline (n8n + GitLab) that auto-reviews every merge request and posts inline bug-flagging comments — cutting manual review overhead for the team.
+      - Built SAM Assistant: Slack bot enabling conversational natural-language queries against production databases, adopted by both technical and non-technical staff across departments.
+      - Founded internal AI Agent Skills Hub (Claude Code/Cursor/OpenCode) — grew to 7 team-contributed skills covering PHPUnit generation, PHP upgrades, and production log investigation via SSH.
+      - Stack: PHP, Laravel, MySQL, PostgreSQL, GitLab CI, Jenkins, Docker, AWS, RabbitMQ, Redis, n8n, Sentry, Kibana.
 
-  - role: Backend Software Engineer & Squad Lead
-    time: November 2018 - August 2022
-    company: Areeb Technology, Cairo, Egypt
+  - role: Backend Developer & Squad Lead
+    time: November 2018 - July 2022 (3 years 9 months)
+    company: Areeb Group, Cairo, Egypt
     details: |
-      - Led the squad to achieve every sprint goal for about a year.
-      - Developed generic components and refactored core features in a large investment project.
-      - Increased Unit testing code coverage to 40% from scratch.
-      - Automated the process of Integration and Deployment.
-      - Technologies used include: Laravel, MySql, Postman, PHPUnit, Mockery, Pair-Mob programming, Azure DevOps, CI, CD, Git-Flow.
+      - Led engineering squad for ~1 year on a large-scale investment management platform, achieving 100% sprint goal completion and zero critical regressions across all release cycles.
+      - Drove PHPUnit test coverage from 0% to 40% on a greenfield codebase — established team-wide testing standards and code review practices.
+      - Implemented CI/CD pipeline (Azure DevOps) enabling daily releases and eliminating all manual deployment steps for a 5+ engineer team.
+      - Refactored core domain components to SOLID principles, measurably reducing regression rate and improving long-term maintainability.
+      - Stack: Laravel, MySQL, PHPUnit, Mockery, Azure DevOps, Git-Flow, Postman.
 
-  - role: Backend Software Engineer
-    time: November 2017 - November 2018
+  - role: Backend Developer
+    time: November 2017 - November 2018 (1 year 1 month)
     company: Robusta Studio, Cairo, Egypt
     details: |
-      - Developed web applications like Mountain view, Faragalla, DAN, Gazef, Trackmena, Couponat, Supermama, Coach to win, Go bus, Coast82, and AXA.
-      - Technologies used include: Laravel, PHP, MySql, PostgreSQL, AWS, Docker, Javascript, WordPress.
+      - Delivered 10+ production web apps (Mountain View, Faragalla, DAN, Gazef, Trackmena, Couponat, Supermama, Coach to Win, Go Bus, Coast82, AXA) across e-commerce, transport, and marketplace verticals — each shipped on schedule with Laravel/PHP.
+      - Architected multi-database, multi-tenant solutions deployed on AWS + Docker, achieving zero-downtime releases for all client platforms.
+      - Integrated third-party APIs and payment gateways including insurance (AXA) and ticketing (Go Bus), handling end-to-end backend logic, data modeling, and API contracts.
+      - Maintained a PHP/WordPress hybrid stack, covering caching, query optimization, and server-side performance tuning.
+      - Stack: Laravel, PHP, MySQL, PostgreSQL, AWS, Docker, JavaScript, WordPress.
 
-  - role: Backend Software Engineer
-    time: May 2017 - October 2017
-    company: Botler.io, Remote, Dubai
+  - role: Backend Developer
+    time: May 2017 - September 2017 (5 months)
+    company: Botler.io, Dubai, United Arab Emirates
     details: |
       - Worked on a chatbot service for companies.
-      - Technologies used include: Laravel, Docker.
+      - Stack: Laravel, Docker.
 
-  - role: Backend Software Engineer
-    time: October 2015 - March 2017
-    company: Ousta Technologies, Cairo, Egypt
+  - role: Backend Developer
+    time: October 2015 - March 2017 (1 year 6 months)
+    company: Ousta Technologies, Egypt
     details: |
-      - Part of the backend team, produced a platform with SaaS architectures and DevOps.
-      - Resulted in a successful product and Agile culture using technologies such as AWS, Jenkins, API Gateway, NGINX, JavaScript/Typescript, Docker, PHP, JIRA.
+      - Contributed backend engineering to a SaaS ride-hailing platform serving multiple cities, built on multi-tenant architecture with AWS infrastructure (S3, EC2).
+      - Adopted Agile/Scrum practices within the team, delivering iterative features on a fortnightly release cycle with zero-downtime deploys.
+      - Integrated Jenkins-based CI/CD pipelines to automate build and deployment workflows, reducing manual release effort across the team.
+      - Built and maintained RESTful APIs consumed by iOS and Android clients, ensuring reliability and low-latency responses under real-time dispatch load.
+      - Stack: PHP, Laravel, MySQL, AWS (S3, EC2), Jenkins, Docker.
 
-  - role: Backend Software Engineer
-    time: July 2014 - September 2015
-    company: E-motion digital agency, Cairo, Egypt
+  - role: PHP Developer
+    time: July 2014 - September 2015 (1 year 3 months)
+    company: e-motion digital creative solutions agency, Cairo, Egypt
     details: |
-      - Developed web applications like Ceramica Innova, MediGroup, Egec, Universal, Suprimo.
-      - Technologies used include: PHP, MySql, Zendframework2.
+      - Developed several web applications like Ceramica Innova, MediGroup, Egec, Universal, Suprimo.
+      - Stack: PHP, MySQL, Zend Framework 2.
 
-  - role: Co-Founder & Backend Software Engineer
-    time: September 2013 - July 2014
-    company: Ieasoft, Mansoura, Egypt
+  - role: PHP Developer
+    time: September 2013 - July 2014 (11 months)
+    company: ieasoft
     details: |
-      - Co-Founded and developed several web applications using HTML, CSS, JavaScript, PHP, Laravel, MySql.
+      - Co-Founded and developed several web applications.
 
-  - role: Backend Software Engineer
-    time: April 2013 - September 2013
-    company: Emagile, Mansoura, Egypt
+  - role: PHP Developer
+    time: April 2013 - September 2013 (6 months)
+    company: emagile
     details: |
-      - Developed several web applications using HTML, CSS, JavaScript, PHP, MySql.
+      - Developed several web applications.
 
 skills:
   title: Skills & Proficiency
