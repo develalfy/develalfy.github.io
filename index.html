@@ -43,7 +43,8 @@ layout: default
               {%- assign lines = bullets_raw | newline_to_br | split: "<br />" -%}
               {%- for line in lines -%}
                 {%- assign trimmed = line | strip -%}
-                {%- if trimmed startswith "-" -%}
+                {%- assign first_char = trimmed | slice: 0, 1 -%}
+                {%- if first_char == "-" -%}
                   {%- assign bullet_text = trimmed | remove_first: "-" | strip -%}
                   {%- if bullet_text != "" -%}<li>{{ bullet_text }}</li>{%- endif -%}
                 {%- endif -%}
