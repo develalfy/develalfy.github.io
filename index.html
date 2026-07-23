@@ -1,9 +1,144 @@
 ---
 layout: default
 ---
-{% include hero.html %}
-{% include experience.html %}
-{% include skills.html %}
-{% include projects.html %}
-{% include volunteering.html %}
-{% include contact.html %}
+{% assign s = site.data.data.sidebar %}
+{% assign exp = site.data.data.experiences %}
+{% assign sk = site.data.data.skills %}
+{% assign edu = site.data.data.education %}
+{% assign vol = site.data.data.volunteers %}
+
+<article class="cv">
+  <header class="cv-head">
+    <h1 class="cv-name">{{ s.name }}</h1>
+    <p class="cv-role">{{ s.tagline }}</p>
+    <p class="cv-meta">
+      {{ s.location }}
+      <span class="sep">·</span>
+      <a href="mailto:{{ s.email }}">{{ s.email }}</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/{{ s.github }}" target="_blank" rel="noopener">github.com/{{ s.github }}</a>
+      <span class="sep">·</span>
+      <a href="https://linkedin.com/in/{{ s.linkedin }}" target="_blank" rel="noopener">linkedin.com/in/{{ s.linkedin }}</a>
+    </p>
+  </header>
+
+  <section class="cv-section">
+    <h2>Experience</h2>
+    <ul class="cv-list">
+      {% for e in exp %}
+      <li>
+        <div class="cv-item-head">
+          <div>
+            <div class="cv-item-title">{{ e.role }}</div>
+            <div class="cv-item-org">{{ e.company }}</div>
+          </div>
+          <div class="cv-item-when">{{ e.time }}</div>
+        </div>
+        {% if e.details %}
+          {% assign stack = e.details | split: "Stack:" | last %}
+          {% assign bullets = e.details | split: "Stack:" | first | strip %}
+          {% if bullets != "" %}
+          <div class="cv-item-desc">{{ bullets | markdownify }}</div>
+          {% endif %}
+          {% if stack contains "," %}
+          <div class="cv-item-stack">Stack: {{ stack | remove: "." | strip }}</div>
+          {% endif %}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Skills</h2>
+    <p class="cv-skills">
+      <strong>Production:</strong>
+      {%- assign first = true -%}
+      {%- for t in sk.toolset -%}
+        {%- if t.level == "Expert" or t.level == "Advanced" -%}
+          {%- if first == false %}, {% endif -%}
+          {{ t.name }}
+          {%- assign first = false -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign prod_count = 0 -%}
+      {%- for t in sk.toolset -%}{%- if t.level == "Expert" or t.level == "Advanced" -%}{%- assign prod_count = prod_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+      {%- assign int_count = 0 -%}
+      {%- for t in sk.toolset -%}{%- if t.level != "Expert" and t.level != "Advanced" -%}{%- assign int_count = int_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+      {%- if int_count > 0 %} · <strong>Working knowledge:</strong>
+        {%- assign first2 = true -%}
+        {%- for t in sk.toolset -%}
+          {%- if t.level != "Expert" and t.level != "Advanced" -%}
+            {%- if first2 == false %}, {% endif -%}
+            {{ t.name }}
+            {%- assign first2 = false -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif %}
+    </p>
+  </section>
+
+  <section class="cv-section">
+    <h2>Projects</h2>
+    <ul class="cv-projects">
+      <li>
+        <div class="cv-project-title">Calora <span class="cv-project-tag">SaaS · live</span></div>
+        <p class="cv-project-desc">Photo-first calorie tracking with AI food recognition, 12-week goals, iOS PWA. <a href="https://calora.develalfy.me" target="_blank" rel="noopener">calora.develalfy.me</a></p>
+      </li>
+      <li>
+        <div class="cv-project-title">Specboard <span class="cv-project-tag">Open source</span></div>
+        <p class="cv-project-desc">Lightweight Jira alternative for solo + small engineering teams. Spec-first, AI-assisted, Postgres-native. <a href="https://github.com/develalfy/specboard" target="_blank" rel="noopener">github.com/develalfy/specboard</a></p>
+      </li>
+      <li>
+        <div class="cv-project-title">SAMurAI <span class="cv-project-tag">Internal · Sam Media</span></div>
+        <p class="cv-project-desc">n8n + GitLab CI pipeline that auto-reviews merge requests and posts inline bug-flagging comments.</p>
+      </li>
+      <li>
+        <div class="cv-project-title">SAM Assistant <span class="cv-project-tag">Internal · Sam Media</span></div>
+        <p class="cv-project-desc">Slack bot for natural-language queries against production databases, used by both engineering and non-technical staff.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Education</h2>
+    <ul class="cv-list">
+      {% for e in edu %}
+      <li>
+        <div class="cv-item-head">
+          <div>
+            <div class="cv-item-title">{{ e.degree }}</div>
+            <div class="cv-item-org">{{ e.university }}</div>
+          </div>
+          <div class="cv-item-when">{{ e.time }}</div>
+        </div>
+        {% if e.details %}<div class="cv-item-desc">{{ e.details | markdownify }}</div>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% if vol and vol.size > 0 %}
+  <section class="cv-section">
+    <h2>Community</h2>
+    <ul class="cv-list">
+      {% for v in vol %}
+      <li>
+        <div class="cv-item-head">
+          <div>
+            <div class="cv-item-title">{{ v.role }}</div>
+            <div class="cv-item-org">{{ v.company }}</div>
+          </div>
+          <div class="cv-item-when">{{ v.time }}</div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <footer class="cv-foot">
+    <span>Updated {{ site.time | date: "%B %Y" }}</span>
+    <span><a href="{{ site.baseurl }}/Alfy_Backend_Developer_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></span>
+  </footer>
+</article>
