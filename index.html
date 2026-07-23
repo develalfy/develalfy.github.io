@@ -35,13 +35,25 @@ layout: default
           <div class="cv-item-when">{{ e.time }}</div>
         </div>
         {% if e.details %}
-          {% assign stack = e.details | split: "Stack:" | last %}
-          {% assign bullets = e.details | split: "Stack:" | first | strip %}
-          {% if bullets != "" %}
-          <div class="cv-item-desc">{{ bullets | markdownify }}</div>
+          {% assign parts = e.details | split: "Stack:" %}
+          {% assign bullets_raw = parts[0] %}
+          {% if bullets_raw != "" %}
+          <div class="cv-item-desc">
+            <ul>
+              {%- assign lines = bullets_raw | newline_to_br | split: "<br />" -%}
+              {%- for line in lines -%}
+                {%- assign trimmed = line | strip -%}
+                {%- if trimmed startswith "-" -%}
+                  {%- assign bullet_text = trimmed | remove_first: "-" | strip -%}
+                  {%- if bullet_text != "" -%}<li>{{ bullet_text }}</li>{%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
           {% endif %}
-          {% if stack contains "," %}
-          <div class="cv-item-stack">Stack: {{ stack | remove: "." | strip }}</div>
+          {% assign stack_raw = parts[1] | strip | remove: "." %}
+          {% if stack_raw contains "," %}
+          <div class="cv-item-stack">Stack: {{ stack_raw }}</div>
           {% endif %}
         {% endif %}
       </li>
