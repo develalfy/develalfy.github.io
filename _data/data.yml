@@ -38,15 +38,13 @@ experiences:
     location: WP. Kuala Lumpur
     time: Aug 2022 — Present
     highlights:
-      - Own production integrations with 90+ mobile network operators serving 1.5M+ active subscribers on a PHP/Laravel high-availability billing platform.
+      - Own production integrations with 90+ mobile network operators serving 1.5M+ active subscribers on a PHP high-availability billing platform.
       - Built a PHPUnit suite from zero across 20+ architectural layers (~50% coverage, 21,000+ LOC) — hundreds of test files.
-      - Engineered a 3-layer duplicate-subscription prevention system (DB partial unique index + model lock + global guard) for an Italian payment gateway, resolving 8 active duplicates.
       - "Built SAMurAI: AI-powered CI pipeline (n8n + GitLab) that auto-reviews merge requests and posts inline bug-flagging comments."
       - "Built SAM Assistant: a Slack bot for natural-language queries against production databases, adopted across departments."
       - Founded an internal AI Agent Skills Hub (Claude Code / Cursor / OpenCode) — grew to 7 team-contributed skills.
     stack:
       - PHP
-      - Laravel
       - MySQL
       - PostgreSQL
       - GitLab CI
